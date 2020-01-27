@@ -18,10 +18,10 @@ import java.util.List;
 @RestController
 public class HelloController {
 
-    @RequestMapping("/api/hello")
+    @RequestMapping("/hello")
 
     public @ResponseBody String hello() {
-        return "Hello World!";
+        return "Hello World from testing bracnch!";
     }
 
    /* @Autowired
