@@ -18,7 +18,7 @@ import java.util.List;
 @RestController
 public class HelloController {
 
-    @RequestMapping("/hello")
+    @RequestMapping("/api/hello")
 
     public @ResponseBody String hello() {
         return "Hello World from testing bracnch!";
