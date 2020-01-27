@@ -1,6 +1,7 @@
 package com.clobportal.service;
 
 import com.clobportal.entity.UserDetail;
+import com.clobportal.repositories.UserRepository;
 import com.clobportal.repositories.UserdetatilReopsitory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,18 +17,11 @@ public class userDetailServiceimpl implements userDetailService {
     UserdetatilReopsitory userdetatilReopsitory;
 
 
-
-    @Transactional
     @Override
     public Object save(UserDetail userDetail) {
-
-        /*UserDetail userDetail =new UserDetail();*/
-         //userDetail.setFirstNmae(firstNmae);
-          String s1 = userDetail.getFirstNmae().toUpperCase();
-          userDetail.setFirstNmae(s1);
-
-      return userdetatilReopsitory.save(userDetail);
+        return null;
     }
-
-
 }
+
+
+

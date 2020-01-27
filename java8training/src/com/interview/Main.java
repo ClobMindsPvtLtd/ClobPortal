@@ -9,12 +9,7 @@ import java.util.function.Predicate;
 class  Filter{
 
     static Predicate<String> name(String s){
-        return  u ->{
-            if(s != null){
-                System.out.println("cannot apply prefix its null");
-            }
-            return u.startsWith(s);
-        };
+        return  u ->u.startsWith(s);
     }
 }
 

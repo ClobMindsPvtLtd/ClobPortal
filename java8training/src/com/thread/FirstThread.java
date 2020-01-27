@@ -25,7 +25,7 @@ public class FirstThread implements Runnable {
 
         t1.start();
        
-        System.out.println(n);
+        System.out.println();
         t2.start();
 
 

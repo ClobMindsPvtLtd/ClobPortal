@@ -1,6 +1,7 @@
 package com.clobportal.controller;
 
 import com.clobportal.entity.UserDetail;
+import com.clobportal.repositories.UserRepository;
 import com.clobportal.repositories.UserdetatilReopsitory;
 import com.clobportal.service.userDetailService;
 import com.clobportal.util.Constants;
@@ -17,9 +18,16 @@ import java.util.List;
 @RestController
 public class HelloController {
 
-    @Autowired
-    userDetailService userDetailService;
+    @RequestMapping("/api/hello")
 
+    public @ResponseBody String hello() {
+        return "Hello World!";
+    }
+
+   /* @Autowired
+    userDetailService userDetailService;
+    @Autowired
+    UserRepository userRepository;
     @Autowired
     UserdetatilReopsitory userdetatilReopsitory;
 
@@ -44,6 +52,7 @@ public class HelloController {
     @ResponseBody
     public ServiceResponse save(@RequestBody UserDetail userDetail){
           ServiceResponse serviceResponse =null;
+
          userDetailService.save(userDetail);
         serviceResponse = new ServiceResponse("200","saved",userDetail);
     return serviceResponse;
@@ -52,16 +61,18 @@ public class HelloController {
     //@RequestMapping(path = "/list", consumes = "application/json", produces = "application/json")
     @GetMapping(value="/list", headers="Accept=application/json")
     @ResponseBody
-    public ServiceResponse  list(){
+    public UserDetail  list(){
         ServiceResponse serviceResponse =null;
        // userdetatilReopsitory.deleteById((long) 7);
+        UserDetail user=userRepository.findByEmail("farooq");
+
        List<UserDetail> list =userdetatilReopsitory.findAll();
        for(UserDetail u:list){
            System.out.println(u.getFirstNmae().toUpperCase());
        }
         serviceResponse=new ServiceResponse("200","listed",list);
-        return serviceResponse;
-    }
+        return user;
+    }*/
 
 
 
