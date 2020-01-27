@@ -24,6 +24,9 @@ public class HelloController {
         return "Hello World from testing bracnch!!!!";
     }
 
+
+//if git is not working in intellij use cli
+
    /* @Autowired
     userDetailService userDetailService;
     @Autowired
