@@ -7,7 +7,7 @@ import com.clobportal.entity.RoleType;
 import com.clobportal.entity.UserDetail;
 import com.clobportal.repositories.RoleDao;
 import com.clobportal.repositories.UserdetatilReopsitory;
-import javafx.beans.property.ReadOnlyListProperty;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.GrantedAuthority;
