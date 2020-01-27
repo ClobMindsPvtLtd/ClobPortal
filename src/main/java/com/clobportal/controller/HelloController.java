@@ -21,7 +21,7 @@ public class HelloController {
     @RequestMapping("/hello")
 
     public @ResponseBody String hello() {
-        return "Hello World from testing bracnch!!!!";
+        return "Hello_World from testing bracnch!";
     }
 
    /* @Autowired
