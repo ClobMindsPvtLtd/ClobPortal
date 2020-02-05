@@ -3,6 +3,7 @@ package com.clobportal.security;
 import com.clobportal.errors.CustomAccessDeniedHandler;
 import com.clobportal.errors.CustomAuthenticationEntryPoint;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
@@ -32,6 +33,7 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .antMatcher("/api/**")
+
                 .authorizeRequests()
                 .antMatchers("/api/signin**").permitAll()
                 .antMatchers("/api/signin/**").permitAll()

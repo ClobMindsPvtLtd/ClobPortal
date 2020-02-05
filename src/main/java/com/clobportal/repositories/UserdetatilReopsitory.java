@@ -12,5 +12,6 @@ public interface UserdetatilReopsitory extends JpaRepository<UserDetail,Long> {
 
     Optional<UserDetail> findByUserName(String userName);
 
+   UserDetail findByEmail(String email);
 
 }

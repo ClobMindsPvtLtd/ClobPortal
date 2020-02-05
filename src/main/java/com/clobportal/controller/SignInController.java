@@ -50,8 +50,7 @@ public class SignInController {
         /*Role role = new Role();
         role.setName(RoleType.ADMIN);
         roleDao.save(role);*/
-// comment by santosh kumar
-// commited again
+
         List<RoleType> roleTypes = new ArrayList<>();
         userDto.getRole().stream().map(roles -> roleTypes.add(RoleType.valueOf(roles)));
         u.setRoles(roleDao.find(userDto.getRole()));
