@@ -21,7 +21,7 @@ public class HelloController {
 
 
 
-    @RequestMapping("/api/hello")
+    @RequestMapping("/hello")
 
     public @ResponseBody String hello() {
         return "Hello_World from t bracnch!";
