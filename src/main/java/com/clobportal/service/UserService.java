@@ -28,7 +28,7 @@ public class UserService implements UserDetailsService {
     public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
 
         UserDetail userDetail= userdetatilReopsitory.findByUserName(userName).orElseThrow(() -> new
-                RuntimeException("username not fount " + userName));
+                RuntimeException("username not found " + userName));
        Set<GrantedAuthority> authority = getAuthorities(userDetail);
 
         return new org.springframework.security.core.userdetails.User(userDetail.getUserName(), userDetail.getPassword(), authority);
